@@ -1,7 +1,13 @@
 @import url("./variables");
 @import url("./header");
+* {
+  box-sizing: border-box;
+}
+
 ul {
   list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
 a {
@@ -48,12 +54,11 @@ a {
 .container .content main .main-nav ul {
   margin: 0;
   padding: 0;
-  height: 70px;
   list-style: none;
 }
 .container .content main .main-nav ul li {
   display: flex;
-  box-sizing: border-box;
+  align-items: center;
 }
 .container .content main .main-nav ul li:first-child {
   height: 50px;
@@ -82,12 +87,37 @@ a {
   background: #7377bf;
   color: #fff;
   width: 100%;
+  display: flex;
+  align-items: center;
+  padding: 0 1rem;
+  border-radius: 5px;
+  margin-top: 1rem;
+}
+.container .content main .alert p {
+  margin-right: auto;
+}
+.container .content main .dashboard-summary {
+  margin-top: 1rem;
 }
 .container .content main .dashboard-summary ul {
   display: flex;
+  flex-direction: column;
+}
+.container .content main .dashboard-summary ul li {
+  text-align: center;
+  line-height: 2rem;
 }
 .container .content main .dashboard-summary ul li:first-child {
   text-transform: uppercase;
+}
+.container .content main .dashboard-summary ul li a {
+  color: #b3b3b3;
+}
+.container .content main .dashboard-summary ul .current {
+  background: #85db80;
+  padding: 5px 20px;
+  border-radius: 25px;
+  color: #fff;
 }
 .container .content img {
   width: 50px;

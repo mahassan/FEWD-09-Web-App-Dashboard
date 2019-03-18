@@ -6,6 +6,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Web App Dashboard</title>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr"
+    crossorigin="anonymous">
   <link rel="stylesheet" href="css/style.css">
 </head>
 
@@ -48,38 +51,32 @@
           <ul>
             <li>dashboard</li>
             <li><input type="text" placeholder="Search">
-              <button>Submit</button>
+              <i class="fas fa-search"></i>
             </li>
           </ul>
         </nav>
         <div class="alert">
-          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Libero, voluptates!
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis, officiis?</p>
+          <i class="fa fa-times"></i>
         </div>
         <section class="dashboard-summary">
           <nav>
             <ul>
-              <a href="#">
-                <li>traffic</li>
-              </a>
-              <a href="#">
-                <li>Hourly</li>
-              </a>
-              <a href="#">
-                <li>Daily</li>
-              </a>
-              <a href="#">
-                  <li>Weekly</li>
-                </a>
-                <a href="#">
-                    <li>Monthly</li>
-                  </a>
+              <li><a href="#">traffic</a></li>
+              <li><a href="#">Hourly</a></li>
+              <li><a href="#">Daily</a></li>
+              <li><a class="current" href="#">Weekly</a></li>
+              <li><a href="#">Monthly</a></li>
             </ul>
           </nav>
+          <main>
+              <canvas id="myChart" width="1200" height="400"></canvas>
+          </main>
         </section>
       </main>
     </div>
-
   </div>
+  <script src="app.js"></script>
 </body>
 
 </html>

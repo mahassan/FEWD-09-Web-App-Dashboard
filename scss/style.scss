@@ -1,7 +1,12 @@
 @import url('./variables');
 @import url('./header');
+*{
+    box-sizing: border-box;
+}
 ul{
     list-style: none;
+    margin: 0;
+    padding: 0;
 }
 a{
     text-decoration: none;
@@ -55,11 +60,10 @@ a{
             ul{
                 margin: 0;
                 padding: 0;
-                height: 70px;
                 list-style: none;
                 li{
                    display: flex;
-                   box-sizing: border-box;
+                   align-items: center;
                    &:first-child{
                        height: 50px;
                        justify-content: center;
@@ -96,17 +100,39 @@ a{
              background: #7377bf;
              color: #fff;
              width: 100%;
+             display: flex;
+             align-items: center;
+             padding:0 1rem;
+             border-radius: 5px;
+             margin-top: 1rem;
+             p{
+                 margin-right: auto;
+             }
          }
          .dashboard-{
              &summary{
-                 ul{
-                     display: flex;
-                     li{
-                         &:first-child{
-                             text-transform: uppercase;
-                         }
-                     }
-                 }
+                margin-top: 1rem;
+                ul{
+                    display: flex;
+                    flex-direction: column;
+
+                    li{
+                        &:first-child{
+                            text-transform: uppercase;
+                        }
+                        text-align: center;
+                        line-height: 2rem;
+                        a{
+                            color: #b3b3b3;
+                        }
+                    }
+                    .current{
+                        background:#85db80;
+                        padding: 5px 20px;
+                        border-radius: 25px;
+                        color: #fff;
+                    }
+                }
              }
          }
      }
