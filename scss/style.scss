@@ -1,5 +1,6 @@
 @import url('./variables');
 @import url('./header');
+// Global
 *{
     box-sizing: border-box;
 }
@@ -11,6 +12,47 @@ ul{
 a{
     text-decoration: none;
 }
+h1,h2,h3,h4,h5,p{
+    margin: 0;
+    padding: 0;
+    font-weight: normal;
+}
+fieldset{
+    border: 0;
+}
+input, textarea, select{
+    border: 1px solid #b3b3b3;
+    background: lighten(#b3b3b3, 25%);
+    width: 100%;
+    height:2rem;
+    margin: 1rem 0;
+    border-radius: 5px;
+}
+.btn-group{
+    display: flex;
+    .btn{
+        justify-content: center;
+        align-items: center;
+        color: #fff;
+        width: 100px;
+        padding: 1rem;
+        font-size:1rem;
+        flex: 1;
+        text-transform: uppercase;
+        &:first-child{
+            // margin-right:1rem;
+        }
+    
+        &.is-success{
+            background: #4d4c72;
+        }
+        &.is-danger{
+            background: #b3b3b3;
+        }
+    }
+}
+
+// styles
 .container{
     display: grid;
     // grid-template-columns:70% 30%;;
@@ -143,6 +185,71 @@ a{
      }
      article{
         border-bottom: 1px solid #d8d8d8;
-    }
+        }
+    .social{
+            li{
+                border: 1px solid #b3b3b3;
+                border-radius: 5px;
+                background: #fbfbfb;
+                height: 5rem;
+                margin-bottom: 1rem;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                h5{
+                    color: #4d4c72;
+                    font-weight: bold;
+                    font-size: 1.4rem;
+                }
+                h2{
+                    color:darken(#b3b3b3, 27%);
+                    font-size: 2rem;
+
+                }
+                div{
+                    &:first-child{
+                        background: #4d4c72;
+                        padding: 0.3rem;
+                        border-radius: 50%;
+                        margin-right:1rem;
+                    }
+                }
+            }
+        }
+        .members{
+            p,div{
+                color:darken(#b3b3b3, 20%);
+            }
+            a{
+                color:#7377bf;
+            }
+            li{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                border-bottom:1px solid #b3b3b3;
+                div{
+                    &:nth-child(2){
+                        flex: 2;
+                    }
+                }
+            }
+            img{
+                border-radius: 50%;
+                width: 100px;
+                height: 100px;
+            }
+            .message-form{
+                display: flex;
+                textarea{
+                    height: 10rem;
+                }
+            }
+            .settings{
+                .form-group{
+                    margin:1rem 0;
+                }
+            }
+        }
     }
 }
