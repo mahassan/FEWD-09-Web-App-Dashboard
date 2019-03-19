@@ -124,5 +124,8 @@ a {
   height: 50px;
   padding: 10px;
 }
+.container .content article {
+  border-bottom: 1px solid #d8d8d8;
+}
 
 /*# sourceMappingURL=style.css.map */
