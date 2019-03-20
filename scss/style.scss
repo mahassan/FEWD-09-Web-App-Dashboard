@@ -1,5 +1,4 @@
 @import url('./variables');
-@import url('./header');
 // Global
 *{
     box-sizing: border-box;
@@ -40,7 +39,7 @@ input, textarea, select{
         flex: 1;
         text-transform: uppercase;
         &:first-child{
-            // margin-right:1rem;
+            margin-right:1rem;
         }
     
         &.is-success{
@@ -60,7 +59,7 @@ input, textarea, select{
         width: 100%;
         height: 73px;
         background: #7477bf;
-        display: grid;
+        display: flex;
         grid-template-columns: 1fr 2fr 1fr;
         grid-gap: 1fr;
         align-items: center;
@@ -69,16 +68,32 @@ input, textarea, select{
         .logo{
             font-size: 1.7rem;
             text-transform: uppercase;
+            order: 0;
+        }
+        .notification{
+            order: 2;
+            img{
+                width: 25%;
+                height: 25%;
+            }
+        }
+        .avatar{
+            margin-left: 0.5rem;
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            overflow: hidden;
+            order: 1;
+            text-align: right;
         }
     }
     .content{
-       
     aside{
         display: flex;
-        height: 87px;
+        height: auto;
         background: #4d4c72;
         justify-content: center;
-        align-items: center;
+        // align-items: center;
 
         .aside-nav{
             position: relative;
@@ -113,7 +128,6 @@ input, textarea, select{
                        text-align: center;
                        text-transform: uppercase;
                        width: auto;
-                       border: 1px solid grey;
                     }
                     &:last-child{
                         text-align: right;
@@ -125,12 +139,17 @@ input, textarea, select{
                             height:50px;
                             border:1px solid grey;
                             border-radius: 5px;
-                           //  position: relative;
-                            
-                            button{
-                               //  position: absolute;
-                                top: 0;
-                            }
+                        }
+                    }
+                    div{
+                        width: 100%;
+                        position: relative;
+                        display: grid;
+                        align-items: center;
+                        .fa-search{
+                            position: absolute;
+                            right: 10px;
+                            top: 30px;
                         }
                     }
                 }
@@ -144,11 +163,14 @@ input, textarea, select{
              width: 100%;
              display: flex;
              align-items: center;
-             padding:0 1rem;
+             padding:0.5rem;
              border-radius: 5px;
              margin-top: 1rem;
              p{
                  margin-right: auto;
+             }
+             .fa-times{
+                 cursor: pointer;
              }
          }
          .dashboard-{

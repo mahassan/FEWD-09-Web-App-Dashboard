@@ -1,4 +1,7 @@
-var traffic = document.getElementById('traffic').getContext('2d');
+const traffic = document.getElementById('traffic').getContext('2d');
+const alert = document.querySelector(".alert");
+const closeAlert = alert.children[1];
+
 var myChart = new Chart(traffic, {
     type: 'line',
     data: {
@@ -49,4 +52,8 @@ var mobileChart = new Chart(mobile, {
                 ],
             }]
         }, 
+})
+//JS
+closeAlert.addEventListener("click", function(){
+    alert.style.display = "none";
 })
