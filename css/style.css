@@ -245,8 +245,10 @@ input, textarea, select {
 .container .content .members .message-form textarea {
   height: 10rem;
 }
-.container .content .members .settings .form-group {
-  margin: 1rem 0;
+@media (min-width: 768px) {
+  .container .content .members .settings .form-group {
+    display: flex;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
