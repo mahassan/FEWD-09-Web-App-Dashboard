@@ -66,11 +66,15 @@ input, textarea, select{
         grid-gap: 1fr;
         align-items: center;
         justify-items: center;
+        padding:1rem;
         
         .logo{
             font-size: 1.7rem;
             text-transform: uppercase;
             order: 0;
+            @media (min-width: 1024px){
+                margin-right: auto;
+            }
         }
         .notification{
             order: 2;
@@ -90,6 +94,10 @@ input, textarea, select{
         }
     }
     .content{
+        @media (min-width: 1024px){
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+        }
     aside{
         display: flex;
         height: auto;

@@ -68,11 +68,17 @@ input, textarea, select {
   grid-gap: 1fr;
   align-items: center;
   justify-items: center;
+  padding: 1rem;
 }
 .container header .logo {
   font-size: 1.7rem;
   text-transform: uppercase;
   order: 0;
+}
+@media (min-width: 1024px) {
+  .container header .logo {
+    margin-right: auto;
+  }
 }
 .container header .notification {
   order: 2;
@@ -89,6 +95,12 @@ input, textarea, select {
   overflow: hidden;
   order: 1;
   text-align: right;
+}
+@media (min-width: 1024px) {
+  .container .content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
 }
 .container .content aside {
   display: flex;
