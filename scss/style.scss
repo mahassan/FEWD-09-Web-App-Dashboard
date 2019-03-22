@@ -311,7 +311,10 @@ input, textarea, select{
                     color: darken(#b3b3b3, 30%);
                     font-size:1.2rem;
                 }
-                display: flex;
+                @media (min-width: 1024px){
+                    display: flex;
+                }
+
                 @media (min-width:768px){
                     display: block;
                 }

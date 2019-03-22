@@ -292,12 +292,14 @@ input, textarea, select {
   width: 100px;
   height: 100px;
 }
-.container .content .members .message-form {
-  display: flex;
-}
 .container .content .members .message-form h3 {
   color: #676767;
   font-size: 1.2rem;
+}
+@media (min-width: 1024px) {
+  .container .content .members .message-form {
+    display: flex;
+  }
 }
 @media (min-width: 768px) {
   .container .content .members .message-form {
