@@ -176,12 +176,27 @@ input, textarea, select {
   display: flex;
   flex-direction: column;
 }
+@media (min-width: 1024px) {
+  .container .content main .dashboard-summary ul {
+    flex-direction: row;
+  }
+}
 .container .content main .dashboard-summary ul li {
   text-align: center;
   line-height: 2rem;
 }
 .container .content main .dashboard-summary ul li:first-child {
   text-transform: uppercase;
+}
+@media (min-width: 1024px) {
+  .container .content main .dashboard-summary ul li:first-child {
+    margin-right: auto;
+  }
+}
+@media (min-width: 1024px) {
+  .container .content main .dashboard-summary ul li {
+    margin: 0 1rem;
+  }
 }
 .container .content main .dashboard-summary ul li a {
   color: #b3b3b3;

@@ -183,13 +183,21 @@ input, textarea, select{
                 ul{
                     display: flex;
                     flex-direction: column;
-
+                    @media (min-width: 1024px){
+                        flex-direction: row;
+                    }
                     li{
                         &:first-child{
                             text-transform: uppercase;
+                            @media (min-width: 1024px){
+                                margin-right: auto;
+                            }
                         }
                         text-align: center;
                         line-height: 2rem;
+                        @media (min-width: 1024px){
+                           margin:0 1rem;
+                        }
                         a{
                             color: #b3b3b3;
                         }
