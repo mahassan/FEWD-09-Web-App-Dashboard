@@ -1,7 +1,11 @@
 @import url('./variables');
 // Global
+@import url('https://fonts.googleapis.com/css?family=Lato:300,300i,400');
 *{
     box-sizing: border-box;
+}
+body{
+    font-family: 'Lato', sans-serif;
 }
 ul{
     list-style: none;
@@ -121,6 +125,13 @@ textarea{
             background-size: cover;
             @media (min-width: 1024px){
                 order:2;
+            }
+        }
+        .userInfo{
+            @media (min-width: 768px){
+                order: 3;
+                margin-left: 1rem;
+                color: #fff;
             }
         }
     }
