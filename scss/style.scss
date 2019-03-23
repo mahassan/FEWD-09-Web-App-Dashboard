@@ -30,6 +30,9 @@ input, textarea, select{
     margin: 1rem 0;
     border-radius: 5px;
 }
+textarea{
+    height: 3.2rem;
+}
 .btn-group{
     display: flex;
     .btn{
@@ -42,6 +45,7 @@ input, textarea, select{
         flex: 1;
         text-transform: uppercase;
         border: 0;
+        height: 75px;
         &:first-child{
             margin-right:1rem;
         }
@@ -114,6 +118,7 @@ input, textarea, select{
             overflow: hidden;
             order: 1;
             text-align: right;
+            background-size: cover;
             @media (min-width: 1024px){
                 order:2;
             }
@@ -185,10 +190,6 @@ input, textarea, select{
                         @media (min-width: 1024px){
                             display: flex;
                             justify-content: flex-end;
-
-                            input{
-                                width: 100px;
-                            }
                         }
                         background: #fbfbfb;
    
@@ -197,6 +198,13 @@ input, textarea, select{
                             height:50px;
                             border:1px solid grey;
                             border-radius: 5px;
+
+                            &#search{
+                                @media (min-width: 1024px){
+                                    width: 25%;
+                                }
+
+                            }
                         }
                     }
                     div{
@@ -276,7 +284,13 @@ input, textarea, select{
                         }
                         border-top: 1px solid #d8d8d8;
                     } 
-            }              
+              }       
+              #mobile{
+                  @media (min-width: 1024px){
+                      display: flex;
+                      align-items: center;
+                  }
+              }       
             }
         }
      }
@@ -380,12 +394,12 @@ input, textarea, select{
                     color: darken(#b3b3b3, 30%);
                     font-size:1.2rem;
                 }
-                @media (min-width: 1024px){
-                    display: flex;
-                }
-
                 @media (min-width:768px){
                     display: block;
+                }
+                @media (min-width: 1024px){
+                    display: grid;
+                    grid-gap: 15px;
                 }
                 .btn{
                     @media (min-width: 1024px){
@@ -393,9 +407,9 @@ input, textarea, select{
                         margin: 0;
                     }
                 }
-                textarea{
-                    height: 10rem;
-                }
+                // textarea{
+                //     height: 10rem;
+                // }
             }
             .settings{
                 input[type="checkbox"]:checked{

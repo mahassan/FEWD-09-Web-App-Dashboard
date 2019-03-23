@@ -35,6 +35,10 @@ input, textarea, select {
   border-radius: 5px;
 }
 
+textarea {
+  height: 3.2rem;
+}
+
 .btn-group {
   display: flex;
 }
@@ -48,6 +52,7 @@ input, textarea, select {
   flex: 1;
   text-transform: uppercase;
   border: 0;
+  height: 75px;
 }
 .btn-group .btn:first-child {
   margin-right: 1rem;
@@ -120,6 +125,7 @@ input, textarea, select {
   overflow: hidden;
   order: 1;
   text-align: right;
+  background-size: cover;
 }
 @media (min-width: 1024px) {
   .container header .avatar {
@@ -205,15 +211,17 @@ input, textarea, select {
     display: flex;
     justify-content: flex-end;
   }
-  .container .content main .main-nav ul li:last-child input {
-    width: 100px;
-  }
 }
 .container .content main .main-nav ul li:last-child input {
   width: 100%;
   height: 50px;
   border: 1px solid grey;
   border-radius: 5px;
+}
+@media (min-width: 1024px) {
+  .container .content main .main-nav ul li:last-child input#search {
+    width: 25%;
+  }
 }
 .container .content main .main-nav ul li div {
   width: 100%;
@@ -292,6 +300,12 @@ input, textarea, select {
   }
   .container .content main .stats article:first-child {
     border-right: 1px solid #d8d8d8;
+  }
+}
+@media (min-width: 1024px) and (min-width: 1024px) {
+  .container .content main .stats #mobile {
+    display: flex;
+    align-items: center;
   }
 }
 .container .content img {
@@ -388,14 +402,15 @@ input, textarea, select {
   color: #676767;
   font-size: 1.2rem;
 }
-@media (min-width: 1024px) {
-  .container .content .members .message-form {
-    display: flex;
-  }
-}
 @media (min-width: 768px) {
   .container .content .members .message-form {
     display: block;
+  }
+}
+@media (min-width: 1024px) {
+  .container .content .members .message-form {
+    display: grid;
+    grid-gap: 15px;
   }
 }
 @media (min-width: 1024px) {
@@ -403,9 +418,6 @@ input, textarea, select {
     padding: 0 !important;
     margin: 0;
   }
-}
-.container .content .members .message-form textarea {
-  height: 10rem;
 }
 .container .content .members .settings input[type=checkbox]:checked {
   border: 1px solid red;

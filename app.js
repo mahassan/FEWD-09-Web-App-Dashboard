@@ -15,6 +15,11 @@ var myChart = new Chart(traffic, {
             ],
         }]
     },
+    options:{
+        legend:{
+            display: false
+        }
+    }
 });
 //bar
 var bar = document.getElementById('bar').getContext('2d');
@@ -36,6 +41,11 @@ var barChart = new Chart(bar, {
                 ],
             }]
         }, 
+        options:{
+            legend:{
+                display: false
+            }
+        }
 })
 //doughnut
 var mobile = document.getElementById('mobile').getContext('2d');
@@ -53,6 +63,15 @@ var mobileChart = new Chart(mobile, {
                 ],
             }]
         }, 
+        options:{
+            legend: {
+                position: 'right',
+                labels: {
+                    boxWidth: 12,
+                  }
+            },
+
+        }
 })
 //JS
 closeAlert.addEventListener("submit", function(){
