@@ -179,72 +179,37 @@ textarea {
   border-bottom-right-radius: 25px;
 }
 .container .content main {
-  padding: 0 10px;
-}
-.container .content main .main-nav ul {
-  margin: 0;
-  padding: 0;
-  list-style: none;
+  padding: 0 0 0 10px;
 }
 @media (min-width: 1024px) {
-  .container .content main .main-nav ul {
+  .container .content main .main-nav {
     display: flex;
   }
 }
-.container .content main .main-nav ul li {
-  display: flex;
-  align-items: center;
-}
-.container .content main .main-nav ul li:first-child {
-  height: 50px;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  text-transform: uppercase;
-  width: auto;
-}
-@media (min-width: 1024px) {
-  .container .content main .main-nav ul li:first-child {
-    margin-right: auto;
-    border-right: 1px solid #b3b3b3;
+@media (min-width: 1024px) and (min-width: 1024px) {
+  .container .content main .main-nav .heading {
+    width: 10%;
+    display: flex;
+    align-items: center;
+    text-transform: uppercase;
   }
 }
-.container .content main .main-nav ul li:last-child {
-  text-align: right;
-  background: #fbfbfb;
-}
-@media (min-width: 768px) {
-  .container .content main .main-nav ul li:last-child {
-    width: 100%;
-  }
-}
-@media (min-width: 1024px) {
-  .container .content main .main-nav ul li:last-child {
+@media (min-width: 1024px) and (min-width: 1024px) {
+  .container .content main .main-nav #search {
+    width: 90%;
+    background: #f3f3f3;
+    border-bottom: 1px solid #e6e6e6;
+    border-left: 1px solid #e6e6e6;
     display: flex;
     justify-content: flex-end;
   }
-}
-.container .content main .main-nav ul li:last-child input {
-  width: 100%;
-  height: 50px;
-  border: 1px solid grey;
-  border-radius: 5px;
-}
-@media (min-width: 1024px) {
-  .container .content main .main-nav ul li:last-child input#search {
-    width: 25%;
+  .container .content main .main-nav #search form {
+    position: relative;
   }
-}
-.container .content main .main-nav ul li div {
-  width: 100%;
-  position: relative;
-  display: grid;
-  align-items: center;
-}
-.container .content main .main-nav ul li div .fa-search {
-  position: absolute;
-  right: 10px;
-  top: 30px;
+  .container .content main .main-nav #search input {
+    width: 300px;
+    background: #fff;
+  }
 }
 .container .content main .alert {
   background: #7377bf;
@@ -454,6 +419,17 @@ textarea {
   .container .content .members .settings .btn-group {
     grid-column-start: 1;
     grid-column-end: 3;
+  }
+}
+
+.fa-search {
+  position: absolute;
+  right: 0;
+}
+@media (min-width: 1024px) {
+  .fa-search {
+    top: 26px;
+    display: block;
   }
 }
 

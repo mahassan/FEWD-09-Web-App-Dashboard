@@ -169,69 +169,44 @@ textarea{
         }
      }
      main{
-         padding: 0 10px;
+         padding: 0 0 0 10px;
          .main-nav{
-            ul{
-                margin: 0;
-                padding: 0;
-                list-style: none;
-                @media (min-width: 1024px){
-                    display: flex;
-                }
-                li{
-                   display: flex;
-                   align-items: center;
-                   &:first-child{
-                       height: 50px;
-                       justify-content: center;
-                       align-items: center;
-                       text-align: center;
-                       text-transform: uppercase;
-                       width: auto;
-                       @media (min-width: 1024px){
-                            margin-right: auto;
-                            border-right:1px solid #b3b3b3;
-                        }
+             @media(min-width: 1024px){
+                 display: flex;
+                 .heading{
+
+                    @media (min-width: 1024px){
+                        width: 10%;
+                        display: flex;
+                        align-items: center;
+                        text-transform: uppercase;
                     }
-                    &:last-child{
-                        text-align: right;
-                        @media (min-width: 768px){
-                            width: 100%;
-                        }
+                 }
+
+                    #search{
                         @media (min-width: 1024px){
+                            width: 90%;
+                            background: lighten( #b3b3b3, 25%);
+                            border-bottom: 1px solid lighten( #b3b3b3, 20%);
+                            border-left: 1px solid lighten( #b3b3b3, 20%);
                             display: flex;
                             justify-content: flex-end;
-                        }
-                        background: #fbfbfb;
-   
-                        input{
-                            width: 100%;
-                            height:50px;
-                            border:1px solid grey;
-                            border-radius: 5px;
 
-                            &#search{
-                                @media (min-width: 1024px){
-                                    width: 25%;
-                                }
-
+                            form{
+                                position: relative;
                             }
-                        }
-                    }
-                    div{
-                        width: 100%;
-                        position: relative;
-                        display: grid;
-                        align-items: center;
-                        .fa-search{
-                            position: absolute;
-                            right: 10px;
-                            top: 30px;
-                        }
-                    }
-                }
     
-            }
+                            input{
+                                width: 300px;
+                                background: #fff;
+                            }                 
+                     }
+                    //  i{
+                    //      position: absolute;
+                    //      right: 0;
+                    //  }
+                 }
+             }
          }
 
          .alert{
@@ -451,4 +426,14 @@ textarea{
             }
         }
     }
+}
+.fa-search{
+    position: absolute;
+    right: 0;
+    @media (min-width: 1024px){
+        top: 26px;
+
+        display: block;
+    }
+
 }
