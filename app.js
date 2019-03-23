@@ -1,5 +1,6 @@
 const traffic = document.getElementById('traffic').getContext('2d');
 const alert = document.querySelector(".alert");
+const form = document.getElementById("message-user");
 const closeAlert = alert.children[1];
 
 var myChart = new Chart(traffic, {
@@ -54,6 +55,14 @@ var mobileChart = new Chart(mobile, {
         }, 
 })
 //JS
-closeAlert.addEventListener("click", function(){
+closeAlert.addEventListener("submit", function(){
     alert.style.display = "none";
 })
+//form
+form.addEventListener("submit", confirmation);
+
+function confirmation(e){
+    e.preventDefault();
+    console.log("123");
+    alert("form submitted")
+}

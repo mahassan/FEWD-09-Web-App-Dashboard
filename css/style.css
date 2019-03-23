@@ -407,6 +407,9 @@ input, textarea, select {
 .container .content .members .message-form textarea {
   height: 10rem;
 }
+.container .content .members .settings input[type=checkbox]:checked {
+  border: 1px solid red;
+}
 @media (min-width: 768px) {
   .container .content .members .settings {
     display: grid;

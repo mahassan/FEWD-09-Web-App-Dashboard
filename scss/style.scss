@@ -398,6 +398,9 @@ input, textarea, select{
                 }
             }
             .settings{
+                input[type="checkbox"]:checked{
+                    border: 1px solid red;
+                }
                 @media (min-width:768px){
                     display: grid;
                     grid-gap: 15px;
