@@ -1,7 +1,12 @@
-const traffic = document.getElementById('traffic').getContext('2d');
 const alert = document.querySelector(".alert");
 const form = document.getElementById("message-user");
+const user = document.getElementById('user');
+const msg = document.getElementById('msg');
+const notifi = document.getElementById("notification");
+const chartNav = document.getElementById("chart-nav");
 const closeAlert = alert.children[1];
+const traffic = document.getElementById('traffic').getContext('2d');
+
 
 var myChart = new Chart(traffic, {
     type: 'line',
@@ -78,10 +83,16 @@ closeAlert.addEventListener("submit", function(){
     alert.style.display = "none";
 })
 //form
-form.addEventListener("submit", confirmation);
+loadEventListeners();
 
-function confirmation(e){
-    e.preventDefault();
-    console.log("123");
-    alert("form submitted")
+function loadEventListeners(){
+    form.addEventListener("submit", confirmation);
 }
+function confirmation(e){
+   if(user.value === ''){
+       alert("nothing");
+   }
+   e.preventDefault();
+}
+
+console.log(form);
