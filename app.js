@@ -1,9 +1,5 @@
 const alertBar = document.querySelector(".alert");
 const form = document.getElementById("message-user");
-<<<<<<< HEAD
-const nameInput = document.getElementById("name");
-const closeAlert = alert.children[1];
-=======
 const user = document.getElementById('user');
 const msg = document.getElementById('msg');
 const notifi = document.getElementById("notification");
@@ -13,7 +9,6 @@ const userFieldError = document.getElementById("userError");
 const traffic = document.getElementById('traffic').getContext('2d');
 
 
->>>>>>> e91271168f23cc2124b92ac05421d1a682c63780
 
 var myChart = new Chart(traffic, {
     type: 'line',
@@ -94,16 +89,10 @@ loadEventListeners();
 
 function loadEventListeners(){
     form.addEventListener("submit", confirmation);
+    
+    document.addEventListener("DOMContentLoaded", jogTimeZone)
 }
 function confirmation(e){
-<<<<<<< HEAD
-if(nameInput.value === ''){
-    alert("Please enter nameInput");
-}
-console.log(nameInput.value);
- e.preventDefault();
-
-=======
    if(user.value === '' || msg.value === ''){
     //userFieldError.setAttribute("data-tip", "Please enter user name");
     alert(" Please fill out the form")
@@ -116,11 +105,15 @@ console.log(nameInput.value);
 
 
 //local storage
-const timeZone = document.getElementById("timeZone").value;
-
+const timeZone = document.getElementById("timeZone");
+let selected
+//set LS
 function selectedZone(){
-    localStorage.setItem("timezone", selected);
-    const selected = localStorage.getItem("timezone");
-    console.log(selected);
->>>>>>> e91271168f23cc2124b92ac05421d1a682c63780
+
+    selected = localStorage.setItem("Time",timeZone.options[timeZone.selectedIndex].text);
+}
+//get LS
+function jogTimeZone(){
+    let ret = localStorage.getItem("Time");
+    timeZone.options[timeZone.selectedIndex].text = ret;
 }
