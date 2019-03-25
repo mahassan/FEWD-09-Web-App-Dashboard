@@ -156,8 +156,9 @@ textarea {
 .container header .userInfo {
   display: none;
 }
-@media (min-width: 1024) {
+@media (min-width: 1024px) {
   .container header .userInfo {
+    display: block;
     order: 3;
     margin-left: 1rem;
     color: #fff;
