@@ -45,6 +45,12 @@ textarea {
   height: 3.2rem;
 }
 
+.userError {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .btn-group {
   display: flex;
 }

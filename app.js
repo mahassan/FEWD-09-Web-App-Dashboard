@@ -90,7 +90,9 @@ loadEventListeners();
 function loadEventListeners(){
     form.addEventListener("submit", confirmation);
     
-    document.addEventListener("DOMContentLoaded", jogTimeZone)
+    document.addEventListener("DOMContentLoaded", jogTimeZone);
+
+    user.addEventListener("keyup", filterUser);
 }
 function confirmation(e){
    if(user.value === '' || msg.value === ''){
@@ -109,11 +111,24 @@ const timeZone = document.getElementById("timeZone");
 let selected
 //set LS
 function selectedZone(){
-
     selected = localStorage.setItem("Time",timeZone.options[timeZone.selectedIndex].text);
 }
 //get LS
 function jogTimeZone(){
     let ret = localStorage.getItem("Time");
     timeZone.options[timeZone.selectedIndex].text = ret;
+}
+//filter user
+function filterUser(e){
+     const text = e.target.value.toLowerCase();
+
+     document.querySelectorAll(".new-members").forEach((e)=>{
+         const item = e.children[1].children[0].textContent;
+         if(item.toLowerCase().indexOf(text) != -1){
+            e.style.display = "block"
+            userFieldError.innerHTML = "No Mataches Found"
+         }else{
+            e.style.display = "none"
+         }
+     });
 }
