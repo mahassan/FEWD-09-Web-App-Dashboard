@@ -122,6 +122,7 @@ function jogTimeZone(){
 //notification 
 bell.addEventListener("click", () => {
     if(nPanel.style.display === "none"){
+    bell.children[1].style.display = "none"
     nPanel.style.display = "block";
     }else{
     nPanel.style.display = "none";   
