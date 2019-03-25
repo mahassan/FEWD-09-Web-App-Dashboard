@@ -136,6 +136,64 @@ textarea {
   position: absolute;
   right: 0;
 }
+.container header .notification .arrow {
+  width: 0;
+  height: 0;
+  border-top: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-left: 10px solid transparent;
+  border-bottom: 10px solid #fff;
+  position: absolute;
+  right: 100px;
+  top: -20px;
+  border-radius: 2px;
+}
+.container header .notification-panel {
+  background: #fff;
+  width: 420px;
+  height: auto;
+  margin-top: 13px;
+  border-radius: 10px;
+  box-shadow: 5px 5px 10px #b3b3b3;
+  z-index: 100;
+  position: absolute;
+  top: 50px;
+  left: -250px;
+  align-items: center;
+  justify-content: center;
+  display: none;
+  /*li*/
+  /*end of li*/
+}
+.container header .notification-panel .title {
+  height: 40px;
+  color: #a0a0a0;
+}
+.container header .notification-panel h4 {
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  text-align: center;
+}
+.container header .notification-panel p, .container header .notification-panel div {
+  color: gray;
+  text-align: left;
+}
+.container header .notification-panel div {
+  text-align: center;
+}
+.container header .notification-panel a {
+  color: #7377bf;
+}
+.container header .notification-panel a li {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 1px solid #b3b3b3;
+  padding: 1rem;
+}
+.container header .notification-panel a li img {
+  border-radius: 50%;
+}
 .container header .avatar {
   margin-left: 0.5rem;
   border-radius: 50%;
