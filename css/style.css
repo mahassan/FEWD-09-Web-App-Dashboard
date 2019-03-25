@@ -155,6 +155,7 @@ textarea {
   left: -250px;
   align-items: center;
   justify-content: center;
+  display: none;
   /*li*/
   /*end of li*/
 }
@@ -171,21 +172,20 @@ textarea {
   color: gray;
   text-align: left;
 }
+.container header .notification-panel div {
+  text-align: center;
+}
 .container header .notification-panel a {
   color: #7377bf;
 }
-.container header .notification-panel li {
+.container header .notification-panel a li {
   display: flex;
   justify-content: center;
   align-items: center;
   border-bottom: 1px solid #b3b3b3;
-  margin-bottom: 1rem;
-  padding: 0 1rem;
+  padding: 1rem;
 }
-.container header .notification-panel li:last-child {
-  border: none;
-}
-.container header .notification-panel li img {
+.container header .notification-panel a li img {
   border-radius: 50%;
 }
 .container header .avatar {

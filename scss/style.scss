@@ -144,6 +144,7 @@ textarea{
                 left: -250px;
                 align-items: center;
                 justify-content: center;
+                display: none;
                 .title{
                     height: 40px;
                     color: darken(lightgray, 20%);
@@ -159,21 +160,21 @@ textarea{
                     color:darken(#b3b3b3, 20%);
                     text-align: left;
                 }
+                div{
+                    text-align: center;
+                }
                 a{
                     color:#7377bf;
-                }
-                li{
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
-                    border-bottom:1px solid #b3b3b3;
-                    margin-bottom:1rem;
-                    padding:0 1rem;
-                    &:last-child{
-                        border: none;
-                    }
-                    img{
-                        border-radius: 50%;
+
+                    li{
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        border-bottom:1px solid #b3b3b3;
+                        padding:1rem;
+                        img{
+                            border-radius: 50%;
+                        }
                     }
                 }
                 /*end of li*/

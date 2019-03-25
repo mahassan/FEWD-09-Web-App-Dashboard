@@ -6,6 +6,8 @@ const notifi = document.getElementById("notification");
 const chartNav = document.getElementById("chart-nav");
 const closeAlert = alertBar.children[1];
 const userFieldError = document.getElementById("userError");
+const bell = document.getElementById("bell");
+const nPanel = document.getElementById("notification-panel");
 const traffic = document.getElementById('traffic').getContext('2d');
 
 
@@ -117,3 +119,11 @@ function jogTimeZone(){
     let ret = localStorage.getItem("Time");
     timeZone.options[timeZone.selectedIndex].text = ret;
 }
+//notification 
+bell.addEventListener("click", () => {
+    if(nPanel.style.display === "none"){
+    nPanel.style.display = "block";
+    }else{
+    nPanel.style.display = "none";   
+    }
+})
