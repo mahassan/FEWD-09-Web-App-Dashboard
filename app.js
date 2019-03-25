@@ -1,11 +1,13 @@
-const alert = document.querySelector(".alert");
+const alertBar = document.querySelector(".alert");
 const form = document.getElementById("message-user");
 const user = document.getElementById('user');
 const msg = document.getElementById('msg');
 const notifi = document.getElementById("notification");
 const chartNav = document.getElementById("chart-nav");
-const closeAlert = alert.children[1];
+const closeAlert = alertBar.children[1];
+const userFieldError = document.getElementById("userError");
 const traffic = document.getElementById('traffic').getContext('2d');
+
 
 
 var myChart = new Chart(traffic, {
@@ -80,7 +82,7 @@ var mobileChart = new Chart(mobile, {
 })
 //JS
 closeAlert.addEventListener("submit", function(){
-    alert.style.display = "none";
+    alertBar.style.display = "none";
 })
 //form
 loadEventListeners();
@@ -89,10 +91,22 @@ function loadEventListeners(){
     form.addEventListener("submit", confirmation);
 }
 function confirmation(e){
-   if(user.value === ''){
-       alert("nothing");
+   if(user.value === '' || msg.value === ''){
+    //userFieldError.setAttribute("data-tip", "Please enter user name");
+    alert(" Please fill out the form")
+   }else{
+    alert("submitted")
    }
    e.preventDefault();
 }
+//chart switch
 
-console.log(form);
+
+//local storage
+const timeZone = document.getElementById("timeZone").value;
+
+function selectedZone(){
+    localStorage.setItem("timezone", selected);
+    const selected = localStorage.getItem("timezone");
+    console.log(selected);
+}
