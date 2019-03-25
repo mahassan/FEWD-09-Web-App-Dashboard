@@ -168,6 +168,7 @@ textarea {
 .container header .notification-panel .title {
   height: 40px;
   color: #a0a0a0;
+  border-bottom: 3px solid #9a9a9a;
 }
 .container header .notification-panel h4 {
   font-size: 1.2rem;
