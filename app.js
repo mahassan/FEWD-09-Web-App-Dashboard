@@ -1,13 +1,14 @@
 const alertBar = document.querySelector(".alert");
+const closeAlert = alertBar.children[1];
 const form = document.getElementById("message-user");
 const user = document.getElementById('user');
 const msg = document.getElementById('msg');
 const notifi = document.getElementById("notification");
 const chartNav = document.getElementById("chart-nav");
-const closeAlert = alertBar.children[1];
 const userFieldError = document.getElementById("userError");
 const bell = document.getElementById("bell");
 const nPanel = document.getElementById("notification-panel");
+nPanel.style.display = 'none';
 const traffic = document.getElementById('traffic').getContext('2d');
 
 
@@ -83,7 +84,7 @@ var mobileChart = new Chart(mobile, {
         }
 })
 //JS
-closeAlert.addEventListener("submit", function(){
+closeAlert.addEventListener("click", function(){
     alertBar.style.display = "none";
 })
 //form
@@ -123,7 +124,9 @@ function jogTimeZone(){
 //notification 
 bell.addEventListener("click", () => {
     if(nPanel.style.display === "none"){
+    //make notification icon disappear
     bell.children[1].style.display = "none"
+    //show notification panel
     nPanel.style.display = "block";
     }else{
     nPanel.style.display = "none";   
